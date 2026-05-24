@@ -1,0 +1,271 @@
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ sudo apt update        
+[sudo] password for cyberlion: 
+Get:1 http://kali.download/kali kali-rolling InRelease [34.0 kB]
+Get:2 http://kali.download/kali kali-rolling/main amd64 Packages [20.9 MB]
+Get:3 http://kali.download/kali kali-rolling/main amd64 Contents (deb) [53.2 MB]
+Get:4 http://kali.download/kali kali-rolling/contrib amd64 Packages [121 kB]
+Get:5 http://kali.download/kali kali-rolling/contrib amd64 Contents (deb) [278 kB]
+Get:6 http://kali.download/kali kali-rolling/non-free amd64 Packages [188 kB]
+Get:7 http://kali.download/kali kali-rolling/non-free amd64 Contents (deb) [910 kB]
+Get:8 http://kali.download/kali kali-rolling/non-free-firmware amd64 Packages [15.4 kB]
+Fetched 75.7 MB in 9s (8,196 kB/s)                                          
+1427 packages can be upgraded. Run 'apt list --upgradable' to see them.
+                                                                             
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:7d:c7:17 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 85891sec preferred_lft 85891sec
+    inet6 fd17:625c:f037:2:948e:2588:d4db:b2d6/64 scope global temporary dynamic 
+       valid_lft 86369sec preferred_lft 14369sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe7d:c717/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86369sec preferred_lft 14369sec
+    inet6 fe80::a00:27ff:fe7d:c717/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+                                                                             
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ip route
+default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100 
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ping -c tesda.gov.ph
+ping: invalid argument: 'tesda.gov.ph'
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ping -c 4 tesda.gov.ph
+PING tesda.gov.ph (202.91.163.13) 56(84) bytes of data.
+
+--- tesda.gov.ph ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3075ms
+
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nslookup tesda.gov.ph
+Server:         10.0.2.3
+Address:        10.0.2.3#53
+
+Non-authoritative answer:
+Name:   tesda.gov.ph
+Address: 202.91.163.13
+
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ss -tulnp      
+Netid      State      Recv-Q      Send-Q           Local Address:Port           Peer Address:Port     Process      
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nmap scanme.nmap.org 
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-05-23 23:28 -0400
+Warning: 45.33.32.156 giving up on port because retransmission cap hit (10).
+Stats: 0:01:41 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 54.98% done; ETC: 23:31 (0:01:22 remaining)
+Stats: 0:01:42 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 54.99% done; ETC: 23:31 (0:01:23 remaining)
+Stats: 0:05:01 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 56.61% done; ETC: 23:37 (0:03:51 remaining)
+Stats: 0:05:06 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 56.65% done; ETC: 23:37 (0:03:54 remaining)
+Stats: 0:05:11 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 56.69% done; ETC: 23:37 (0:03:58 remaining)
+Stats: 0:05:13 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 56.71% done; ETC: 23:37 (0:03:59 remaining)
+Stats: 0:08:37 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 58.55% done; ETC: 23:43 (0:06:06 remaining)
+Stats: 0:08:40 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 58.56% done; ETC: 23:43 (0:06:08 remaining)
+
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nmap scanme.nmap.org
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-05-23 23:37 -0400
+Warning: 45.33.32.156 giving up on port because retransmission cap hit (10).
+
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nmap scanme.nmap.org
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-05-24 01:32 -0400
+
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ tcpdump - D
+tcpdump: eth0: You don't have permission to perform this capture on that device
+(Attempt to create packet socket failed - CAP_NET_RAW may be required)
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ sudo tcpdump - D
+[sudo] password for cyberlion: 
+tcpdump: can't parse filter expression: syntax error
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nmap scanme.nmap.org
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-05-24 01:35 -0400
+Warning: 45.33.32.156 giving up on port because retransmission cap hit (10).
+Stats: 0:01:54 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 51.42% done; ETC: 01:38 (0:01:49 remaining)
+Stats: 0:01:56 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 51.43% done; ETC: 01:38 (0:01:50 remaining)
+
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ sudo tcpdump - D    
+tcpdump: can't parse filter expression: syntax error
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ sudo tcpdump -i Wlan
+tcpdump: Wlan: No such device exists
+(No such device exists)
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ sudo tcpdump -i     
+tcpdump: option requires an argument -- 'i'
+tcpdump version 4.99.6
+libpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)
+OpenSSL 3.5.5 27 Jan 2026
+64-bit build, 64-bit time_t
+Usage: tcpdump [-AbdDefghHIJKlLnNOpqStuUvxX#] [ -B size ] [ -c count ] [--count]
+                [ -C file_size ] [ -E algo:secret ] [ -F file ] [ -G seconds ]
+                [ -i interface ] [ --immediate-mode ] [ -j tstamptype ]
+                [ -M secret ] [ --number ] [ --print ] [ -Q in|out|inout ]
+                [ -r file ] [ -s snaplen ] [ -T type ] [ --version ]
+                [ -V file ] [ -w file ] [ -W filecount ] [ -y datalinktype ]
+                [ --time-stamp-precision precision ] [ --micro ] [ --nano ]
+                [ -z postrotate-command ] [ -Z user ] [ expression ]
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ip a    
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:7d:c7:17 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
+       valid_lft 75726sec preferred_lft 75726sec
+    inet6 fd17:625c:f037:2:948e:2588:d4db:b2d6/64 scope global temporary dynamic 
+       valid_lft 85939sec preferred_lft 13939sec
+    inet6 fd17:625c:f037:2:a00:27ff:fe7d:c717/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 85939sec preferred_lft 13939sec
+    inet6 fe80::a00:27ff:fe7d:c717/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ sudo tcpdump -i eth0
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+01:50:43.897414 IP6 fe80::2 > ip6-allnodes: ICMP6, router advertisement, length 56
+01:50:43.915835 IP6 fe80::a00:27ff:fe7d:c717 > ff02::16: HBH ICMP6, multicast listener report v2, 2 group record(s), length 48
+01:50:43.933492 IP 10.0.2.15.33598 > 10.0.2.3.domain: 633+ PTR? 2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. (90)
+01:50:43.942798 IP 10.0.2.3.domain > 10.0.2.15.33598: 633 NXDomain* 0/0/0 (90)
+01:50:43.943914 IP 10.0.2.15.40583 > 10.0.2.3.domain: 64211+ PTR? 6.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa. (90)
+01:50:44.009485 IP 10.0.2.3.domain > 10.0.2.15.40583: 64211 NXDomain 0/1/0 (166)
+01:50:44.009987 IP 10.0.2.15.37439 > 10.0.2.3.domain: 36638+ PTR? 7.1.7.c.d.7.e.f.f.f.7.2.0.0.a.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. (90)
+01:50:44.012656 IP 10.0.2.3.domain > 10.0.2.15.37439: 36638 NXDomain* 0/0/0 (90)
+01:50:44.029804 IP 10.0.2.15.58925 > 10.0.2.3.domain: 9905+ PTR? 3.2.0.10.in-addr.arpa. (39)
+01:50:44.032367 IP 10.0.2.3.domain > 10.0.2.15.58925: 9905 NXDomain* 0/0/0 (39)
+01:50:44.032793 IP 10.0.2.15.55467 > 10.0.2.3.domain: 41327+ PTR? 15.2.0.10.in-addr.arpa. (40)
+01:50:44.035740 IP 10.0.2.3.domain > 10.0.2.15.55467: 41327 NXDomain* 0/0/0 (40)
+01:50:44.453218 IP6 fe80::a00:27ff:fe7d:c717 > ff02::16: HBH ICMP6, multicast listener report v2, 2 group record(s), length 48
+01:50:49.002222 ARP, Request who-has 10.0.2.3 tell 10.0.2.15, length 28
+01:50:49.002722 ARP, Reply 10.0.2.3 is-at 52:55:0a:00:02:03 (oui Unknown), length 50
+^C
+15 packets captured
+15 packets received by filter
+0 packets dropped by kernel
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ls
+'New Text Document.txt'
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ cat
+ls log.txt
+ls log.txt
+cat log.txt
+cat log.txt
+^C
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ls log.txt
+ls: cannot access 'log.txt': No such file or directory
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ ls New Text Document.txt
+ls: cannot access 'New': No such file or directory
+ls: cannot access 'Text': No such file or directory
+ls: cannot access 'Document.txt': No such file or directory
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ help
+Command 'help' not found, did you mean:
+  command 'dhelp' from deb dhelp
+  command 'yelp' from deb yelp
+  command 'helm' from deb kubernetes-helm
+Try: sudo apt install <deb name>
+                                                                                                                   
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ script log.txt      
+Script started, output log file is 'log.txt'.
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
+Script done.
+                                                                                                                                                                                                                                            
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ cat log.txt
+Script started on 2026-05-24 02:04:04-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="236" LINES="52"]
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
+
+Script done on 2026-05-24 02:04:42-04:00 [COMMAND_EXIT_CODE="0"]
+                                                                                                                                                                                                                                            
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nano log.txt        
+                                                                                                                                                                                                                                            
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ nano log.txt
+                                                                                                                                                                                                                                            
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ cat log.txt
+Script started on 2026-05-24 02:04:04-04:00 [TERM="xterm-256color" TTY="/dev/
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
+
+Script done on 2026-05-24 02:04:42-04:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-05-24 02:04:04-04:00 [TERM="xterm-256color" TTY="/dev/
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
+
+Script done on 2026-05-24 02:04:42-04:00 [COMMAND_EXIT_CODE="0"]
+                                                                             
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ tail log.txt
+Script started on 2026-05-24 02:04:04-04:00 [TERM="xterm-256color" TTY="/dev/
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
+
+Script done on 2026-05-24 02:04:42-04:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-05-24 02:04:04-04:00 [TERM="xterm-256color" TTY="/dev/
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
+
+Script done on 2026-05-24 02:04:42-04:00 [COMMAND_EXIT_CODE="0"]
+                                                                             
+┌──(cyberlion㉿vbox)-[~/Desktop]
+└─$ 
