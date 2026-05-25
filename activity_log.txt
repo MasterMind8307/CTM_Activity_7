@@ -1,0 +1,102 @@
+Welcome to
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+
+Set Hostname: Bytestrong
+
+Select Connection Type:
+1. Ethernet
+2. WLAN
+Enter choice (1 or 2): 1
+Set IP Address (Class A only): 100.1.1.1
+Subnet Mask: 255.0.0.0
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+[Active Website]
+https://www.sinrevilo.moc
+https://www.xeno-byte.moc
+https://www.gi4nt-tcr.moc
+
+Welcome to the adoVM CTM Terminal Simulator. Type 'help' for commands.
+
+Bytestrong@adoVM-$: help
+
+adoVM Linux Commands:
+ip a                              - Shows your IP address, interfaces
+ip route                          - Shows your gateway
+hostname -I                       - Shows your IP address quickly
+ping {target_IP or website}       - Checks if a host is reachable
+traceroute {target_IP or website} - Shows the path packets take (routers/hops)
+netstat -tulnp                    - Shows open ports and running services
+nslookup  {target_IP or website}  - Converts domain to IP address
+dig {target_IP or website}        - Advanced DNS lookup
+nmap {target_IP or website}       - Scan a target
+nmap -sV {target_IP or website}   - Detect services + versions
+nmap -A {target_IP or website}    - Aggressive scan (OS + services)
+arp-scan --localnet               - Finds devices in your network (like WiFi users)
+tcpdump -i {net_con}              - Capture live network traffic
+curl {website}                    - Fetch web data (used in APIs & testing)
+wget {file_name}                  - Download log files
+nc {ip_address} {port}            - Connect to a port
+whois {ip_address}                - Get domain info (owner, registrar)
+shutdown                          - Shutdown xen0byt3@adoVM
+
+Bytestrong@adoVM-$: ip a
+Ethernet -> 100.1.1.1
+Bytestrong@adoVM-$: ip route
+{ip}.{address}.{hidden}.{by}.{xen0byt3}
+Bytestrong@adoVM-$: hostname -I
+Bytestrong 100.1.1.1
+Bytestrong@adoVM-$: ping {target_IP}
+Reply from {target_IP}: bytes=32 time=38ms TTL=64
+Reply from {target_IP}: bytes=32 time=11ms TTL=64
+Reply from {target_IP}: bytes=32 time=22ms TTL=64
+Reply from {target_IP}: bytes=32 time=96ms TTL=64
+Bytestrong@adoVM-$: traceroute {target_IP}
+
+traceroute to {target_IP}, 30 hops max, 60 byte packets
+
+1       192.168.1.143 (LAN Gateway)  11 ms  29 ms  49 ms
+2       192.168.1.155 (LAN Gateway)  17 ms  46 ms  82 ms
+3       10.0.3.39 (ISP Core Router)  11 ms  48 ms  117 ms
+4       10.0.4.26 (ISP Core Router)  18 ms  51 ms  32 ms
+5       * * * Request timed out
+6       172.11.107.182 (External Network)  25 ms  52 ms  102 ms
+7       * * * Request timed out
+8       107.118.88.226 (External Network)  30 ms  20 ms  87 ms
+
+Trace complete.
+Bytestrong@adoVM-$: nslookup {target_IP}
+Unknown host
+Bytestrong@adoVM-$: dig {target_IP}
+; <<>> DiG 9.18.0 <<>> {target_IP}
+;; global options: +cmd
+
+;; status: NXDOMAIN
+Bytestrong@adoVM-$: nmap {target_IP}
+Host seems down or not found.
+Bytestrong@adoVM-$: nmap -sV {target_IP}
+Host seems down or not found.
+Bytestrong@adoVM-$: nmap -A {target_IP}
+Host seems down or not found.
+Bytestrong@adoVM-$: tcpdump -i {net_con}
+
+listening on {net_con}, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+12:07:58 IP 192.168.1.8.80 > 192.168.1.224.80: Flags [S], seq 5056, win 64240, length 0
+12:07:58 IP 192.168.1.23.443 > 192.168.1.127.443: UDP, length 37
+12:07:59 IP 192.168.1.115 > 192.168.1.9: ICMP echo request, id 3095, seq 3, length 64
+12:07:59 IP 192.168.1.247.445 > 192.168.1.69.445: Flags [S], seq 3623, win 64240, length 0
+12:08:00 IP 192.168.1.23.3389 > 192.168.1.72.3389: Flags [S], seq 4374, win 64240, length 0
+12:08:00 IP 192.168.1.61.22 > 192.168.1.218.22: Flags [S], seq 4456, win 64240, length 0
+12:08:01 IP 192.168.1.93.445 > 192.168.1.186.445: Flags [S], seq 9932, win 64240, length 0
+12:08:01 IP 192.168.1.184.53 > 192.168.1.241.53: UDP, length 48
+Bytestrong@adoVM-$: arp-scan --localnet
+You don't have admin privileges to invoke this command
+Bytestrong@adoVM-$: whois {ip_address}
