@@ -1,0 +1,203 @@
+
+Welcome to
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+
+Set Hostname: corvusclavis
+
+Select Connection Type:
+1. Ethernet
+2. WLAN
+Enter choice (1 or 2): 1
+Set IP Address (Class A only): 10.0.0.8
+Subnet Mask: 255.0.0.0
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+[Active Website]
+https://www.sinrevilo.moc
+https://www.xeno-byte.moc
+https://www.gi4nt-tcr.moc
+
+Welcome to the adoVM CTM Terminal Simulator. Type 'help' for commands.
+
+corvusclavis@adoVM-$: help
+
+adoVM Linux Commands:
+ip a                              - Shows your IP address, interfaces
+ip route                          - Shows your gateway
+hostname -I                       - Shows your IP address quickly
+ping {target_IP or website}       - Checks if a host is reachable
+traceroute {target_IP or website} - Shows the path packets take (routers/hops)
+netstat -tulnp                    - Shows open ports and running services
+nslookup  {target_IP or website}  - Converts domain to IP address
+dig {target_IP or website}        - Advanced DNS lookup
+nmap {target_IP or website}       - Scan a target
+nmap -sV {target_IP or website}   - Detect services + versions
+nmap -A {target_IP or website}    - Aggressive scan (OS + services)
+arp-scan --localnet               - Finds devices in your network (like WiFi users)
+tcpdump -i {net_con}              - Capture live network traffic
+curl {website}                    - Fetch web data (used in APIs & testing)
+wget {file_name}                  - Download log files
+nc {ip_address} {port}            - Connect to a port
+whois {ip_address}                - Get domain info (owner, registrar)
+shutdown                          - Shutdown xen0byt3@adoVM
+
+corvusclavis@adoVM-$: 255.0.0.0
+Command not found
+corvusclavis@adoVM-$: ip a
+Ethernet -> 10.0.0.8
+corvusclavis@adoVM-$: ip route
+{ip}.{address}.{hidden}.{by}.{xen0byt3}
+corvusclavis@adoVM-$: corvusclavis
+Command not found
+corvusclavis@adoVM-$: ping
+Usage: ping <target>
+corvusclavis@adoVM-$: ping {target_10.0.0.8}
+Reply from {target_10.0.0.8}: bytes=32 time=75ms TTL=64
+Reply from {target_10.0.0.8}: bytes=32 time=52ms TTL=64
+Reply from {target_10.0.0.8}: bytes=32 time=47ms TTL=64
+Reply from {target_10.0.0.8}: bytes=32 time=45ms TTL=64
+corvusclavis@adoVM-$: traceroute {target_10.0.0.8
+
+traceroute to {target_10.0.0.8, 30 hops max, 60 byte packets
+
+1       192.168.1.27 (LAN Gateway)  6 ms  22 ms  110 ms
+2       * * * Request timed out
+3       10.0.3.219 (ISP Core Router)  13 ms  42 ms  66 ms
+4       10.0.4.77 (ISP Core Router)  20 ms  47 ms  92 ms
+5       10.0.5.39 (ISP Core Router)  18 ms  47 ms  49 ms
+6       131.40.170.240 (External Network)  12 ms  53 ms  57 ms
+7       * * * Request timed out
+8       * * * Request timed out
+
+Trace complete.
+corvusclavis@adoVM-$: netstat -tulnp
+Ports: 80, 443, 22
+corvusclavis@adoVM-$: nslookup {target_10.0.0.8}
+Unknown host
+corvusclavis@adoVM-$: dig {target_10.0.0.8}
+; <<>> DiG 9.18.0 <<>> {target_10.0.0.8}
+;; global options: +cmd
+
+;; status: NXDOMAIN
+corvusclavis@adoVM-$: nmap {target_10.0.0.8}
+Host seems down or not found.
+corvusclavis@adoVM-$: nmap -sV {target_10.0.0.8}
+Host seems down or not found.
+corvusclavis@adoVM-$: nmap -A {target_10.0.0.8}
+Host seems down or not found.
+corvusclavis@adoVM-$: arp-scan --localnet
+You don't have admin privileges to invoke this command
+corvusclavis@adoVM-$: tcpdump -i {net_con}
+
+listening on {net_con}, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+21:03:20 IP 192.168.1.130 > 192.168.1.131: ICMP echo request, id 3388, seq 1, length 64
+21:03:20 IP 192.168.1.60.80 > 192.168.1.224.80: Flags [S], seq 3763, win 64240, length 0
+21:03:21 IP 192.168.1.174.53 > 192.168.1.174.53: Flags [S], seq 3580, win 64240, length 0
+21:03:21 IP 192.168.1.111.443 > 192.168.1.235.443: UDP, length 73
+21:03:22 IP 192.168.1.8.22 > 192.168.1.143.22: UDP, length 55
+21:03:22 IP 192.168.1.229 > 192.168.1.243: ICMP echo request, id 2445, seq 6, length 64
+21:03:23 IP 192.168.1.241.22 > 192.168.1.199.22: UDP, length 32
+21:03:23 IP 192.168.1.21.22 > 192.168.1.253.22: Flags [S], seq 6888, win 64240, length 0
+corvusclavis@adoVM-$: curl {website}
+curl: (6) Could not resolve host: {website}
+corvusclavis@adoVM-$: wget {file_name}
+File not found.
+corvusclavis@adoVM-$: wget {corvusclavis}
+File not found.
+corvusclavis@adoVM-$: nc {ip_address} {port}
+Connection refused.
+corvusclavis@adoVM-$: nc {10.0.0.8} {port}
+Connection refused.
+corvusclavis@adoVM-$: whois {ip_address}
+
+[WHOIS Lookup for {ip_address}]
+
+No match for IP address
+corvusclavis@adoVM-$: ip a
+Ethernet -> 10.0.0.8
+corvusclavis@adoVM-$: ping 8.8.8.8
+Reply from 8.8.8.8: bytes=32 time=44ms TTL=64
+Reply from 8.8.8.8: bytes=32 time=43ms TTL=64
+Reply from 8.8.8.8: bytes=32 time=11ms TTL=64
+Reply from 8.8.8.8: bytes=32 time=42ms TTL=64
+corvusclavis@adoVM-$: traceroute google.com
+
+traceroute to google.com, 30 hops max, 60 byte packets
+
+1       192.168.1.132 (LAN Gateway)  14 ms  27 ms  87 ms
+2       192.168.1.212 (LAN Gateway)  10 ms  29 ms  72 ms
+3       10.0.3.108 (ISP Core Router)  16 ms  56 ms  103 ms
+4       10.0.4.76 (ISP Core Router)  6 ms  56 ms  98 ms
+5       10.0.5.95 (ISP Core Router)  26 ms  21 ms  89 ms
+6       190.45.61.55 (External Network)  28 ms  20 ms  39 ms
+7       117.153.251.84 (External Network)  23 ms  52 ms  89 ms
+8       196.183.229.119 (External Network)  16 ms  53 ms  108 ms
+9       197.250.30.94 (External Network)  12 ms  56 ms  54 ms
+10      185.184.33.195 (External Network)  18 ms  54 ms  47 ms
+11      169.128.34.149 (External Network)  9 ms  48 ms  62 ms
+12      113.159.147.166 (External Network)  9 ms  47 ms  81 ms
+
+Trace complete.
+corvusclavis@adoVM-$: nslookup google.com
+Unknown host
+corvusclavis@adoVM-$: dig google.com
+; <<>> DiG 9.18.0 <<>> google.com
+;; global options: +cmd
+
+;; status: NXDOMAIN
+corvusclavis@adoVM-$: nmap 192.168.1.1
+Host seems down or not found.
+corvusclavis@adoVM-$: nmap -sV 192.168.1.1
+Host seems down or not found.
+corvusclavis@adoVM-$: nmap -A 192.168.1.1
+Host seems down or not found.
+corvusclavis@adoVM-$: tcpdump -i Ethernet
+
+listening on Ethernet, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+21:12:42 IP 192.168.1.96 > 192.168.1.119: ICMP echo request, id 1930, seq 1, length 64
+21:12:42 IP 192.168.1.178.53 > 192.168.1.101.53: UDP, length 27
+21:12:43 IP 192.168.1.96.445 > 192.168.1.38.445: UDP, length 76
+21:12:43 IP 192.168.1.45.3389 > 192.168.1.82.3389: UDP, length 32
+21:12:44 IP 192.168.1.124.80 > 192.168.1.136.80: UDP, length 30
+21:12:44 IP 192.168.1.17 > 192.168.1.38: ICMP echo request, id 1306, seq 6, length 64
+21:12:45 IP 192.168.1.43 > 192.168.1.248: ICMP echo request, id 4613, seq 7, length 64
+21:12:45 IP 192.168.1.191 > 192.168.1.249: ICMP echo request, id 3520, seq 8, length 64
+corvusclavis@adoVM-$: sudo tcpdump -i eth0
+Command not found
+corvusclavis@adoVM-$: arp-scan --localnet
+You don't have admin privileges to invoke this command
+corvusclavis@adoVM-$: sudo arp-scan --localnet
+
+Scanning local network...
+
+192.168.1.38     25:B8:8B:A4:CD:25  HP-Desktop (Printer)
+192.168.1.116    9A:29:18:BC:39:95  iPhone-13 (IoT Sensor)
+192.168.1.80     6F:77:C2:FD:0E:88  TPLink-Router (Smart Bulb)
+192.168.1.110    5F:70:CD:F4:EC:0B  Epson-Printer (MacBook)
+192.168.1.191    06:30:78:23:BC:B7  Samsung-TV (Smart Bulb)
+192.168.1.39     9E:1A:BC:8E:90:32  Samsung-TV (Printer)
+192.168.1.29     82:48:07:B8:18:10  iPad-Pro (Router)
+192.168.1.162    BC:F7:55:90:3F:D6  Lenovo-ThinkPad (IoT Sensor)
+192.168.1.166    31:01:CA:D8:42:BB  SmartLight-01 (Smart TV)
+192.168.1.51     09:66:35:AD:3F:A1  Lenovo-ThinkPad (Router)
+corvusclavis@adoVM-$: ls
+
+File Listing:
+activity_log.txt
+activity_real.txt
+activity_10_log.txt
+
+corvusclavis@adoVM-$: cat filename.txt
+corvusclavis@adoVM-$: wget https://example.com/file.txt
+File not found.
+corvusclavis@adoVM-$: actactivity_log.txt
+Command not found
