@@ -1,0 +1,128 @@
+Welcome to
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+
+Set Hostname: ciphernova
+
+Select Connection Type:
+1. Ethernet
+2. WLAN
+Enter choice (1 or 2): 1
+Set IP Address (Class A only): 10.0.0.8
+Subnet Mask: 255.0.0.0
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+[Active Website]
+https://www.sinrevilo.moc
+https://www.xeno-byte.moc
+https://www.gi4nt-tcr.moc
+
+Welcome to the adoVM CTM Terminal Simulator. Type 'help' for commands.
+
+ciphernova@adoVM-$: help
+
+adoVM Linux Commands:
+ip a                              - Shows your IP address, interfaces
+ip route                          - Shows your gateway
+hostname -I                       - Shows your IP address quickly
+ping {target_IP or website}       - Checks if a host is reachable
+traceroute {target_IP or website} - Shows the path packets take (routers/hops)
+netstat -tulnp                    - Shows open ports and running services
+nslookup  {target_IP or website}  - Converts domain to IP address
+dig {target_IP or website}        - Advanced DNS lookup
+nmap {target_IP or website}       - Scan a target
+nmap -sV {target_IP or website}   - Detect services + versions
+nmap -A {target_IP or website}    - Aggressive scan (OS + services)
+arp-scan --localnet               - Finds devices in your network (like WiFi users)
+tcpdump -i {net_con}              - Capture live network traffic
+curl {website}                    - Fetch web data (used in APIs & testing)
+wget {file_name}                  - Download log files
+nc {ip_address} {port}            - Connect to a port
+whois {ip_address}                - Get domain info (owner, registrar)
+shutdown                          - Shutdown xen0byt3@adoVM
+
+ciphernova@adoVM-$: 10.0.0.8
+Command not found
+ciphernova@adoVM-$: ip a
+Ethernet -> 10.0.0.8
+ciphernova@adoVM-$: ciphernova
+Command not found
+ciphernova@adoVM-$: ping
+Usage: ping <target>
+ciphernova@adoVM-$: traceroute
+Usage: traceroute <target>
+ciphernova@adoVM-$: ping 8.8.8.8
+Reply from 8.8.8.8: bytes=32 time=71ms TTL=64
+Reply from 8.8.8.8: bytes=32 time=43ms TTL=64
+Reply from 8.8.8.8: bytes=32 time=55ms TTL=64
+Reply from 8.8.8.8: bytes=32 time=53ms TTL=64
+ciphernova@adoVM-$: traceroute google.com
+
+traceroute to google.com, 30 hops max, 60 byte packets
+
+1       192.168.1.119 (LAN Gateway)  14 ms  20 ms  100 ms
+2       * * * Request timed out
+3       10.0.3.16 (ISP Core Router)  24 ms  51 ms  53 ms
+4       10.0.4.220 (ISP Core Router)  24 ms  24 ms  99 ms
+5       * * * Request timed out
+6       * * * Request timed out
+7       152.151.89.23 (External Network)  7 ms  55 ms  60 ms
+
+Trace complete.
+ciphernova@adoVM-$: dig google.com
+; <<>> DiG 9.18.0 <<>> google.com
+;; global options: +cmd
+
+;; status: NXDOMAIN
+ciphernova@adoVM-$: nslook google.com
+Command not found
+ciphernova@adoVM-$: nslookup google.com
+Unknown host
+ciphernova@adoVM-$: nmap 192.168.1.1
+Host seems down or not found.
+ciphernova@adoVM-$: nmap -sV 192.168.1.1
+Host seems down or not found.
+ciphernova@adoVM-$: nmap -A 192.168.1.1
+Host seems down or not found.
+ciphernova@adoVM-$: tcpdump -i etho
+
+listening on etho, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+10:17:58 IP 192.168.1.224 > 192.168.1.135: ICMP echo request, id 3262, seq 1, length 64
+10:17:58 IP 192.168.1.228.53 > 192.168.1.71.53: UDP, length 37
+10:17:59 IP 192.168.1.88 > 192.168.1.233: ICMP echo request, id 1524, seq 3, length 64
+10:17:59 IP 192.168.1.197 > 192.168.1.169: ICMP echo request, id 1762, seq 4, length 64
+10:18:00 IP 192.168.1.33.443 > 192.168.1.72.443: Flags [S], seq 3158, win 64240, length 0
+10:18:00 IP 192.168.1.25.80 > 192.168.1.48.80: Flags [S], seq 9018, win 64240, length 0
+10:18:01 IP 192.168.1.180 > 192.168.1.242: ICMP echo request, id 1470, seq 7, length 64
+10:18:01 IP 192.168.1.238.53 > 192.168.1.246.53: UDP, length 94
+ciphernova@adoVM-$: arp-scan --localnet
+You don't have admin privileges to invoke this command
+ciphernova@adoVM-$: sudo arp-scan --localnet
+
+Scanning local network...
+
+192.168.1.161    50:89:37:6D:48:33  SmartLight-01 (Printer)
+192.168.1.211    AC:3E:DE:D0:6A:66  iPhone-13 (Router)
+192.168.1.71     EC:75:DD:75:9F:9F  HP-Desktop (MacBook)
+192.168.1.223    3C:59:88:3D:1D:6D  Samsung-TV (Android Phone)
+192.168.1.252    D2:E8:8F:EA:CD:05  Galaxy-S21 (IoT Sensor)
+192.168.1.16     CB:BE:B9:70:B6:3C  Epson-Printer (Smart Bulb)
+192.168.1.125    18:10:2C:68:66:F7  TPLink-Router (Desktop PC)
+192.168.1.50     5E:DF:90:0C:37:3F  HP-Desktop (IP Camera)
+192.168.1.225    EA:CE:DF:DE:2C:66  Samsung-TV (Tablet)
+192.168.1.133    7E:85:51:5F:79:0E  SmartLight-01 (Printer)
+ciphernova@adoVM-$: Is -la
+Command not found
+ciphernova@adoVM-$: cat file.txt
+ciphernova@adoVM-$: https://example.com/file.zip
+Command not found
+ciphernova@adoVM-$: cat activity log.txt
+ciphernova@adoVM-$: wget log.txt
+File not found.
