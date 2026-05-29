@@ -1,0 +1,49 @@
+Logs:
+Hostname: a1 ventures
+IP Address: 1.1.1.1
+
+User Activity Logs:
+help
+ip a
+ip route
+hostname -I
+ping sinrevilo.moc
+xeno-byte.moc
+ping xeno-byte.moc
+ping gi4nt-tcr.moc
+traceroute sinrevilo.moc
+traceroute xenu-byte.moc
+traceroute gi4nt.moc
+ns lookup.moc
+nslookup sinrevilo.moc
+xenu-byte.moc
+nslookup xenu-byte.moc
+nslookup xeno-byte.moc
+nslookup gi4nt-tcr.moc
+dig sinrevilo.moc
+dig xeno-byte.moc
+dig gi4nt.moc
+nmap 89.562.167.1
+nmap 149.658.125.3
+nmap-sv 89.562.167.1
+nmap-sv 149.658.125.3
+nmap-sv 78.562.35.6
+nmap-a 89.562.167.1
+nmap-a 149.658.125.3
+nmap-a 78.562.35.6
+tcpdump -i ethernet 89.562.167.1
+tcpdump -i ethernet 149.658.125.3
+tcpdump -i ethernet 78.562.35.6
+arp-scan --localnet 89.562.167.1
+arp-scan --localnet
+sudo artscan
+sudo arp-scan --localnet
+ls
+cat
+cat activity_log
+cat activity_log.txt
+cat activity_real.txt
+cat activity_10_log.txt
+wget activity_log.txt
+wget activity_real.txt
+wget activity_10_log.txt
