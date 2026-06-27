@@ -1,0 +1,504 @@
+┌──(ray㉿kali)-[~]
+└─$ git clone htts://github.com
+Cloning into 'github.com'...
+git: 'remote-htts' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote-https
+fatal: remote helper 'htts' aborted session
+                                                                                                                         
+┌──(ray㉿kali)-[~]
+└─$ git clone https://github.com
+Cloning into 'github.com'...
+fatal: repository 'https://github.com/' not found
+                                                                                                                         
+┌──(ray㉿kali)-[~]
+└─$ git clone https://github.com/MasterMind8307/CTM_Activity_7
+Cloning into 'CTM_Activity_7'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 13 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (13/13), 7.46 MiB | 5.21 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+                                                                                                                         
+┌──(ray㉿kali)-[~]
+└─$ cd CTM_Activity_7
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ ls
+ activity_log.txt  'adoVM CTM SIM a7.exe'   README.md
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ sudo apt update && sudo apt install mono-complete -y
+[sudo] password for ray: 
+Get:1 http://kali.cs.nycu.edu.tw/kali kali-rolling InRelease [34.0 kB]
+Get:2 http://kali.cs.nycu.edu.tw/kali kali-rolling/main amd64 Packages [21.3 MB]
+Get:3 http://kali.cs.nycu.edu.tw/kali kali-rolling/main amd64 Contents (deb) [53.4 MB]
+Get:4 http://kali.cs.nycu.edu.tw/kali kali-rolling/non-free amd64 Packages [175 kB]                                     
+Get:5 http://kali.cs.nycu.edu.tw/kali kali-rolling/non-free amd64 Contents (deb) [891 kB]                               
+Fetched 75.8 MB in 41s (1,852 kB/s)                                                                                     
+96 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Note, selecting 'mono-devel' instead of 'mono-complete'
+The following packages were automatically installed and are no longer required:
+  enchant-2       libipc-run-perl  libpostal1       libsodium23    libxmlsec1-1             postgresql-common-dev
+  libavc1394-0    libmbedcrypto16  libraw23t64      libteamdctl0   libxmlsec1-openssl1      python3-pluginbase
+  libgdal38       libpoppler147    libsdl2-classic  libunibreak6   openjdk-21-jre           python3-pysnmp4
+  libio-pty-perl  libpostal-data   libsimdutf31     libvidstab1.1  openjdk-21-jre-headless  python3-tz
+Use 'sudo apt autoremove' to remove them.
+
+Installing:
+  mono-devel
+
+Installing dependencies:
+  libgdiplus  libpkgconf7  mono-libraries  mono-runtime  pkgconf  pkgconf-bin
+
+Summary:
+  Upgrading: 0, Installing: 7, Removing: 0, Not Upgrading: 96
+  Download size: 64.6 MB
+  Space needed: 230 MB / 30.1 GB available
+
+Get:1 http://http.kali.org/kali kali-rolling/main amd64 libgdiplus amd64 6.1+dfsg-2 [165 kB]
+Get:3 http://kali.download/kali kali-rolling/main amd64 pkgconf-bin amd64 2.5.1-4 [35.9 kB]
+Get:5 http://http.kali.org/kali kali-rolling/main amd64 mono-libraries all 6.14.1+ds2-3 [11.6 MB]
+Get:2 http://mirror.twds.com.tw/kali kali-rolling/main amd64 libpkgconf7 amd64 2.5.1-4 [47.8 kB]
+Get:4 http://mirror.twds.com.tw/kali kali-rolling/main amd64 pkgconf amd64 2.5.1-4 [33.6 kB]
+Get:6 http://http.kali.org/kali kali-rolling/main amd64 mono-runtime amd64 6.14.1+ds2-3 [2,817 kB]
+Get:7 http://http.kali.org/kali kali-rolling/main amd64 mono-devel amd64 6.14.1+ds2-3 [49.9 MB]
+Fetched 64.6 MB in 15s (4,448 kB/s)                                                                                     
+Selecting previously unselected package libgdiplus.
+(Reading database… 435236 files and directories currently installed.)
+Preparing to unpack …/0-libgdiplus_6.1+dfsg-2_amd64.deb…
+Unpacking libgdiplus (6.1+dfsg-2)…
+Selecting previously unselected package libpkgconf7:amd64.
+Preparing to unpack …/1-libpkgconf7_2.5.1-4_amd64.deb…
+Unpacking libpkgconf7:amd64 (2.5.1-4)…
+Selecting previously unselected package pkgconf-bin.
+Preparing to unpack …/2-pkgconf-bin_2.5.1-4_amd64.deb…
+Unpacking pkgconf-bin (2.5.1-4)…
+Selecting previously unselected package pkgconf:amd64.
+Preparing to unpack …/3-pkgconf_2.5.1-4_amd64.deb…
+Unpacking pkgconf:amd64 (2.5.1-4)…
+Selecting previously unselected package mono-libraries.
+Preparing to unpack …/4-mono-libraries_6.14.1+ds2-3_all.deb…
+Unpacking mono-libraries (6.14.1+ds2-3)…
+Selecting previously unselected package mono-runtime.
+Preparing to unpack …/5-mono-runtime_6.14.1+ds2-3_amd64.deb…
+Unpacking mono-runtime (6.14.1+ds2-3)…
+Selecting previously unselected package mono-devel.
+Preparing to unpack …/6-mono-devel_6.14.1+ds2-3_amd64.deb…
+Unpacking mono-devel (6.14.1+ds2-3)…
+Setting up libpkgconf7:amd64 (2.5.1-4)…
+Setting up libgdiplus (6.1+dfsg-2)…
+Setting up pkgconf-bin (2.5.1-4)…
+Setting up mono-libraries (6.14.1+ds2-3)…
+Setting up pkgconf:amd64 (2.5.1-4)…
+Setting up mono-runtime (6.14.1+ds2-3)…
+update-alternatives: using /usr/bin/mono to provide /usr/bin/cli (cli) in auto mode
+update-alternatives: using /usr/bin/gacutil to provide /usr/bin/cli-gacutil (global-assembly-cache-tool) in auto mode
+Setting up mono-devel (6.14.1+ds2-3)…
+update-alternatives: using /usr/bin/al to provide /usr/bin/cli-al (assembly-linker) in auto mode
+update-alternatives: using /usr/bin/mono-csc to provide /usr/bin/cli-csc (c-sharp-compiler) in auto mode
+update-alternatives: using /usr/bin/monodis to provide /usr/bin/cli-ildasm (cil-disassembler) in auto mode
+update-alternatives: using /usr/bin/resgen to provide /usr/bin/cli-resgen (resource-file-generator) in auto mode
+update-alternatives: using /usr/bin/sn to provide /usr/bin/cli-sn (strong-name-tool) in auto mode
+Processing triggers for libc-bin (2.42-16)…
+Processing triggers for man-db (2.13.1-1)…
+Processing triggers for kali-menu (2026.2.6)…
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ mono "adoVM CTM SIM a7.exe"
+Cannot open assembly 'adoVM CTM SIM a7.exe': File does not contain a valid CIL image.
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ ls -a
+ .   ..   activity_log.txt  'adoVM CTM SIM a7.exe'   .git   README.md
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ sudo apt update && sudo apt install wine -y         
+Hit:1 http://http.kali.org/kali kali-rolling InRelease 
+96 packages can be upgraded. Run 'apt list --upgradable' to see them.
+The following packages were automatically installed and are no longer required:
+  enchant-2       libipc-run-perl  libpostal1       libsodium23    libxmlsec1-1             postgresql-common-dev
+  libavc1394-0    libmbedcrypto16  libraw23t64      libteamdctl0   libxmlsec1-openssl1      python3-pluginbase
+  libgdal38       libpoppler147    libsdl2-classic  libunibreak6   openjdk-21-jre           python3-pysnmp4
+  libio-pty-perl  libpostal-data   libsimdutf31     libvidstab1.1  openjdk-21-jre-headless  python3-tz
+Use 'sudo apt autoremove' to remove them.
+
+Installing:
+  wine
+                                                                                                                         
+Installing dependencies:
+  libasound2-plugins  libcapi20-3t64  libwine  libxkbregistry0  libz-mingw-w64  wine-common  wine64
+                                                                                                                         
+Suggested packages:
+  cups-bsd                   q4wine      winetricks   dosbox           wine64-preloader
+  gstreamer1.0-plugins-ugly  winbind     playonlinux  exe-thumbnailer
+  ttf-mscorefonts-installer  fonts-wine  wine-binfmt  | kio-extras
+
+Recommended packages:
+  wine32
+
+Summary:
+  Upgrading: 0, Installing: 8, Removing: 0, Not Upgrading: 96
+  Download size: 103 MB
+  Space needed: 634 MB / 29.8 GB available
+
+Get:1 http://http.kali.org/kali kali-rolling/main amd64 libasound2-plugins amd64 1.2.12-2+b4 [71.5 kB]
+Get:3 http://http.kali.org/kali kali-rolling/main amd64 wine-common all 10.0~repack-11 [1,359 kB]
+Get:4 http://kali.download/kali kali-rolling/main amd64 libxkbregistry0 amd64 1.13.1-1 [17.3 kB]
+Get:7 http://http.kali.org/kali kali-rolling/main amd64 wine64 amd64 10.0~repack-11+b1 [277 kB]
+Get:2 http://http.kali.org/kali kali-rolling/main amd64 libcapi20-3t64 amd64 1:3.27-3.2+b2 [28.8 kB]
+Get:8 http://http.kali.org/kali kali-rolling/main amd64 wine all 10.0~repack-11 [71.5 kB]
+Get:5 http://http.kali.org/kali kali-rolling/main amd64 libz-mingw-w64 all 1.3.2+dfsg-1 [165 kB]
+Get:6 http://http.kali.org/kali kali-rolling/main amd64 libwine amd64 10.0~repack-11+b1 [101 MB]
+Fetched 103 MB in 31s (3,370 kB/s)                                                                                      
+Selecting previously unselected package libasound2-plugins:amd64.
+(Reading database… 438931 files and directories currently installed.)
+Preparing to unpack …/0-libasound2-plugins_1.2.12-2+b4_amd64.deb…
+Unpacking libasound2-plugins:amd64 (1.2.12-2+b4)…
+Selecting previously unselected package libcapi20-3t64:amd64.
+Preparing to unpack …/1-libcapi20-3t64_1%3a3.27-3.2+b2_amd64.deb…
+Unpacking libcapi20-3t64:amd64 (1:3.27-3.2+b2)…
+Selecting previously unselected package wine-common.
+Preparing to unpack …/2-wine-common_10.0~repack-11_all.deb…
+Unpacking wine-common (10.0~repack-11)…
+Selecting previously unselected package libxkbregistry0:amd64.
+Preparing to unpack …/3-libxkbregistry0_1.13.1-1_amd64.deb…
+Unpacking libxkbregistry0:amd64 (1.13.1-1)…
+Selecting previously unselected package libz-mingw-w64.
+Preparing to unpack …/4-libz-mingw-w64_1.3.2+dfsg-1_all.deb…
+Unpacking libz-mingw-w64 (1.3.2+dfsg-1)…
+Selecting previously unselected package libwine:amd64.
+Preparing to unpack …/5-libwine_10.0~repack-11+b1_amd64.deb…
+Unpacking libwine:amd64 (10.0~repack-11+b1)…
+Selecting previously unselected package wine64.
+Preparing to unpack …/6-wine64_10.0~repack-11+b1_amd64.deb…
+Unpacking wine64 (10.0~repack-11+b1)…
+Selecting previously unselected package wine.
+Preparing to unpack …/7-wine_10.0~repack-11_all.deb…
+Unpacking wine (10.0~repack-11)…
+Setting up libasound2-plugins:amd64 (1.2.12-2+b4)…
+Setting up libz-mingw-w64 (1.3.2+dfsg-1)…
+Setting up libxkbregistry0:amd64 (1.13.1-1)…
+Setting up libcapi20-3t64:amd64 (1:3.27-3.2+b2)…
+Setting up wine-common (10.0~repack-11)…
+Setting up libwine:amd64 (10.0~repack-11+b1)…
+Setting up wine64 (10.0~repack-11+b1)…
+Setting up wine (10.0~repack-11)…
+Processing triggers for hicolor-icon-theme (0.18-2)…
+Processing triggers for libc-bin (2.42-16)…
+Processing triggers for man-db (2.13.1-1)…
+Processing triggers for kali-menu (2026.2.6)…
+Processing triggers for wine (10.0~repack-11)…
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ wine "adoVM CTM SIM a7.exe"
+it looks like wine32 is missing, you should install it.
+multiarch needs to be enabled first.  as root, please
+execute "dpkg --add-architecture i386 && apt-get update &&
+apt-get install wine32:i386"
+wine: created the configuration directory '/home/ray/.wine'
+004c:err:system:NtUserChangeDisplaySettings Changing L"\\\\.\\DISPLAY1" display settings returned -2.
+004c:err:explorer:initialize_display_settings Failed to initialize registry display settings for L"\\\\.\\DISPLAY1".
+0054:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0054:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0054:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0054:err:ole:start_rpcss Failed to open RpcSs service
+004c:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+004c:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+004c:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+wine: failed to open L"C:\\windows\\syswow64\\rundll32.exe": c0000135
+002c:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+002c:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+0108:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+002c:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+0108:err:setupapi:do_file_copyW Unsupported style(s) 0x10
+
+Welcome to
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+
+Set Hostname: raymac-pc
+
+Select Connection Type:
+1. Ethernet
+2. WLAN
+Enter choice (1 or 2): 1
+Set IP Address (Class A only): 10.11.12.1
+Subnet Mask: 255.0.0.0
+
+▄▀█ █▀▄ █▀█ █░█ █▀▄▀█   █▀▀ ▀█▀ █▀▄▀█   █▀ █ █▀▄▀█
+█▀█ █▄▀ █▄█ ▀▄▀ █░▀░█   █▄▄ ░█░ █░▀░█   ▄█ █ █░▀░█
+developed by xen0byt3
+==================================================================
+[Active Website]
+https://www.sinrevilo.moc
+https://www.xeno-byte.moc
+https://www.gi4nt-tcr.moc
+
+Welcome to the adoVM CTM Terminal Simulator. Type 'help' for commands.
+
+raymac-pc@adoVM-$: help
+
+adoVM Linux Commands:
+ip a                              - Shows your IP address, interfaces
+ip route                          - Shows your gateway
+hostname -I                       - Shows your IP address quickly
+ping {target_IP or website}       - Checks if a host is reachable
+traceroute {target_IP or website} - Shows the path packets take (routers/hops)
+netstat -tulnp                    - Shows open ports and running services
+nslookup  {target_IP or website}  - Converts domain to IP address
+dig {target_IP or website}        - Advanced DNS lookup
+nmap {target_IP or website}       - Scan a target
+nmap -sV {target_IP or website}   - Detect services + versions
+nmap -A {target_IP or website}    - Aggressive scan (OS + services)
+arp-scan --localnet               - Finds devices in your network (like WiFi users)
+tcpdump -i {net_con}              - Capture live network traffic
+curl {website}                    - Fetch web data (used in APIs & testing)
+wget {file_name}                  - Download log files
+nc {ip_address} {port}            - Connect to a port
+whois {ip_address}                - Get domain info (owner, registrar)
+shutdown                          - Shutdown xen0byt3@adoVM
+
+raymac-pc@adoVM-$: ip a
+Ethernet -> 10.11.12.1
+raymac-pc@adoVM-$: ip route
+{ip}.{address}.{hidden}.{by}.{xen0byt3}
+raymac-pc@adoVM-$: hostname -l
+Command not found
+raymac-pc@adoVM-$: hostname -I
+raymac-pc 10.11.12.1
+raymac-pc@adoVM-$: 0058:err:clipboard:convert_selection Timed out waiting for SelectionNotify event
+ping xeno-byte.moc
+Reply from xeno-byte.moc: bytes=32 time=56ms TTL=64
+Reply from xeno-byte.moc: bytes=32 time=69ms TTL=64
+Reply from xeno-byte.moc: bytes=32 time=31ms TTL=64
+Reply from xeno-byte.moc: bytes=32 time=38ms TTL=64
+raymac-pc@adoVM-$: traceroute www.xeno-byte.moc
+
+traceroute to www.xeno-byte.moc, 30 hops max, 60 byte packets
+
+1       192.168.1.196 (LAN Gateway)  20 ms  50 ms  112 ms
+2       192.168.1.139 (LAN Gateway)  24 ms  36 ms  87 ms
+3       10.0.3.88 (ISP Core Router)  21 ms  22 ms  103 ms
+4       10.0.4.4 (ISP Core Router)  23 ms  31 ms  36 ms
+5       10.0.5.138 (ISP Core Router)  17 ms  60 ms  110 ms
+6       167.205.120.64 (External Network)  19 ms  24 ms  74 ms
+7       178.209.50.119 (External Network)  23 ms  59 ms  115 ms
+8       148.71.28.196 (External Network)  11 ms  45 ms  40 ms
+9       110.14.178.133 (External Network)  28 ms  43 ms  42 ms
+
+Trace complete.
+raymac-pc@adoVM-$: netstat -tulnp
+Ports: 80, 443, 22
+raymac-pc@adoVM-$: nslookup www.xeno-byte.moc
+Unknown host
+raymac-pc@adoVM-$: nslookup xeno-byte.moc
+149.658.125.3
+raymac-pc@adoVM-$: dig xeno-byte.moc
+; <<>> DiG 9.18.0 <<>> xeno-byte.moc
+;; global options: +cmd
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2068
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; QUESTION SECTION:
+;xeno-byte.moc.        IN  A
+
+;; ANSWER SECTION:
+xeno-byte.moc.     86400   IN  A   149.658.125.3
+
+;; Query time: 22 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Sat Jun 27 17:11:28 2026
+;; MSG SIZE  rcvd: 56
+
+raymac-pc@adoVM-$:
+Command not found
+raymac-pc@adoVM-$: nmap xeno-byte.moc
+Host seems down or not found.
+raymac-pc@adoVM-$: nmap 149.658.125.3
+
+Starting Nmap Scan on 149.658.125.3...
+
+PORT     STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp  open  https
+
+Nmap done.
+raymac-pc@adoVM-$: nmap -sV 149.658.125.3
+
+Starting Nmap Scan on 149.658.125.3...
+
+PORT     STATE SERVICE VERSION
+21/tcp  open  ftp vsftpd 3.0.3
+22/tcp  open  ssh OpenSSH 8.2
+80/tcp  open  http Apache
+443/tcp  open  https nginx
+
+Nmap done.
+raymac-pc@adoVM-$: nmap -A 149.658.125.3
+
+Starting Nmap Scan on 149.658.125.3...
+
+PORT     STATE SERVICE VERSION
+21/tcp  open  ftp vsftpd 3.0.3
+22/tcp  open  ssh OpenSSH 8.2
+80/tcp  open  http Apache
+443/tcp  open  https nginx
+
+OS detection: Kali Linux
+Device type: general purpose
+Running: Linux
+
+Service Info:
+Network Distance: 1 hop
+
+Host Script Results:
+|_http-title: Welcome Page
+|_ssh-hostkey: 2048 SHA256:xyz123 (RSA)
+
+Nmap done.
+raymac-pc@adoVM-$: arp-scan --localnet
+You don't have admin privileges to invoke this command
+raymac-pc@adoVM-$: sudo arp-scan --localnet
+
+Scanning local network...
+
+192.168.1.137    11:D9:CB:FC:59:5E  SmartLight-01 (Printer)
+192.168.1.66     1D:69:7E:95:07:33  SmartLight-01 (Smart Bulb)
+192.168.1.19     8A:0F:7B:96:19:B6  iPhone-13 (Tablet)
+192.168.1.84     6D:DF:63:67:4D:7D  TempSensor-X (IP Camera)
+192.168.1.39     A6:1C:30:64:49:3F  iPad-Pro (Router)
+192.168.1.33     78:7B:39:4A:B6:F3  TPLink-Router (Printer)
+192.168.1.74     A2:A5:CB:1F:48:40  MacBook-Air (Windows Laptop)
+192.168.1.150    65:04:73:60:F3:72  Galaxy-S21 (Smart TV)
+192.168.1.107    27:4A:BC:DB:6F:09  CCTV-Cam01 (MacBook)
+192.168.1.177    38:52:DC:DA:63:77  SmartLight-01 (iPhone)
+raymac-pc@adoVM-$: tcpdump -i Ethernet
+
+listening on Ethernet, link-type EN10MB (Ethernet), capture size 262144 bytes
+
+17:28:33 IP 192.168.1.233.3389 > 192.168.1.30.3389: Flags [S], seq 2791, win 64240, length 0
+17:28:33 IP 192.168.1.18.22 > 192.168.1.203.22: Flags [S], seq 6908, win 64240, length 0
+17:28:34 IP 192.168.1.109.53 > 192.168.1.203.53: Flags [S], seq 4972, win 64240, length 0
+17:28:34 IP 192.168.1.233.3389 > 192.168.1.51.3389: Flags [S], seq 4359, win 64240, length 0
+17:28:35 IP 192.168.1.199.443 > 192.168.1.35.443: Flags [S], seq 7717, win 64240, length 0
+17:28:35 IP 192.168.1.153.3389 > 192.168.1.35.3389: Flags [S], seq 8177, win 64240, length 0
+17:28:36 IP 192.168.1.74.53 > 192.168.1.139.53: Flags [S], seq 3656, win 64240, length 0
+17:28:36 IP 192.168.1.71.80 > 192.168.1.193.80: UDP, length 71
+raymac-pc@adoVM-$: curl xeno-byte.moc
+Trying 149.658.125.3...
+Connected to xeno-byte.moc (149.658.125.3) port 80 (#0)
+GET / HTTP/1.1
+Host: xeno-byte.moc
+User-Agent: curl/7.68.0
+Accept: */*
+
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Kali)
+Content-Type: text/html
+
+<html><h1>Xeno Byte Server</h1></html>
+raymac-pc@adoVM-$: nc 149.658.125.3 80
+Connected!
+Yowww you're doing good
+Have fun invoking Linux commands?
+Good Luck future SOC Analyst
+raymac-pc@adoVM-$: whois 149.658.125.3
+
+[WHOIS Lookup for 149.658.125.3]
+
+
+inetnum:        149.658.125.3 - 149.658.125.3
+netname:        KALI-NET
+descr:          Kali Linux Services
+org:            Offensive Security
+country:        US
+
+admin-c:        ADM2233
+tech-c:         TEC2369
+
+status:         ASSIGNED PA
+mnt-by:         MAINT-KALI-NET
+created:        2022-02-28
+last-modified:  2025-09-23
+
+source:         RIPE
+
+person:         Network Administrator
+address:        Offensive Security
+phone:          +40-479-3535
+e-mail:         abuse@kali.org
+
+remarks:        This is a simulated WHOIS response for training purposes
+
+raymac-pc@adoVM-$: ls
+
+File Listing:
+activity_log.txt
+activity_real.txt
+activity_10_log.txt
+
+raymac-pc@adoVM-$: cat activity_log.txt
+It's a prank!
+raymac-pc@adoVM-$: cat activity_real.txt
+Am I real?
+Do the words I speak before you make you feel
+That the love I lay for you will see no ending?
+Well, if you look into my eyes, then you should know
+raymac-pc@adoVM-$: cat activity_10_log.txt
+Logs:
+Hostname: raymac-pc
+IP: 10.11.12.1
+help
+ip a
+ip route
+hostname -l
+hostname -I
+ping xeno-byte.moc
+traceroute www.xeno-byte.moc
+netstat -tulnp
+nslookup www.xeno-byte.moc
+nslookup xeno-byte.moc
+dig xeno-byte.moc
+
+nmap xeno-byte.moc
+nmap 149.658.125.3
+nmap -sV 149.658.125.3
+nmap -A 149.658.125.3
+arp-scan --localnet
+sudo arp-scan --localnet
+tcpdump -i Ethernet
+curl xeno-byte.moc
+nc 149.658.125.3 80
+whois 149.658.125.3
+ls
+cat activity_log.txt
+cat activity_real.txt
+cat activity_10_log.txt
+raymac-pc@adoVM-$: shutdown
+Shutting down adoVM...
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ ls -la
+total 7840
+drwxrwxr-x  3 ray ray    4096 Jun 27 16:14  .
+drwx------ 19 ray ray    4096 Jun 27 16:38  ..
+-rw-rw-r--  1 ray ray       0 Jun 27 16:14  activity_log.txt
+-rw-rw-r--  1 ray ray 8009085 Jun 27 16:14 'adoVM CTM SIM a7.exe'
+drwxrwxr-x  7 ray ray    4096 Jun 27 16:14  .git
+-rw-rw-r--  1 ray ray    2962 Jun 27 16:14  README.md
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$ nano activity_log.txt
+                                                                                                                         
+┌──(ray㉿kali)-[~/CTM_Activity_7]
+└─$       
