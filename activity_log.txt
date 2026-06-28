@@ -1,0 +1,201 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s31f6: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether fc:45:96:66:0c:f9 brd ff:ff:ff:ff:ff:ff
+    altname enxfc4596660cf9
+3: wlp4s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 86:59:c1:f7:13:10 brd ff:ff:ff:ff:ff:ff permaddr 34:f3:9a:b9:33:4a
+    altname wlx34f39ab9334a
+    inet 192.168.1.36/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp4s0
+       valid_lft 86307sec preferred_lft 86307sec
+    inet6 fe80::c6b0:1d67:f659:238/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+192.168.1.36 
+PING google.com (172.217.27.78) 56(84) bytes of data.
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=1 ttl=115 time=3.67 ms
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=2 ttl=115 time=128 ms
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=3 ttl=115 time=7.51 ms
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=4 ttl=115 time=25.7 ms
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=5 ttl=115 time=5.23 ms
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=6 ttl=115 time=9.24 ms
+64 bytes from nrt12s15-in-f78.1e100.net (172.217.27.78): icmp_seq=7 ttl=115 time=22.1 ms
+
+--- google.com ping statistics ---
+8 packets transmitted, 7 received, 12.5% packet loss, time 7008ms
+rtt min/avg/max/mdev = 3.666/28.745/127.821/41.201 ms
+traceroute to google.com (172.217.27.78), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  1.121 ms  1.063 ms *
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * ncmnlh-aj-in-f14.1e100.net (172.217.27.78)  21.934 ms  21.907 ms
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.27.78
+Name:	google.com
+Address: 2404:6800:4017:80c::200e
+
+
+; <<>> DiG 9.18.49 <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17871
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		18	IN	A	172.217.27.78
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Mon Jun 29 00:24:53 PST 2026
+;; MSG SIZE  rcvd: 55
+
+Starting Nmap 7.92 ( https://nmap.org ) at 2026-06-29 00:25 PST
+Nmap scan report for fedora (192.168.1.36)
+Host is up (0.00016s latency).
+All 1000 scanned ports on fedora (192.168.1.36) are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap scan report for google.com (172.217.27.78)
+Host is up (0.023s latency).
+Other addresses for google.com (not scanned): 2404:6800:4017:80c::200e
+rDNS record for 172.217.27.78: nrt12s15-in-f14.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 12.00 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2026-06-29 00:25 PST
+Starting Nmap 7.92 ( https://nmap.org ) at 2026-06-29 00:27 PST
+Starting Nmap 7.92 ( https://nmap.org ) at 2026-06-29 00:27 PST
+Nmap scan report for fedora (192.168.1.36)
+Host is up (0.00038s latency).
+All 1000 scanned ports on fedora (192.168.1.36) are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.12 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2026-06-29 00:27 PST
+Nmap scan report for fedora (192.168.1.36)
+Host is up (0.00024s latency).
+All 1000 scanned ports on fedora (192.168.1.36) are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.45 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2026-06-29 00:28 PST
+Nmap scan report for fedora (192.168.1.36)
+Host is up (0.00026s latency).
+All 1000 scanned ports on fedora (192.168.1.36) are in ignored states.
+Not shown: 1000 closed tcp ports (conn-refused)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.53 seconds
+
+ * Waiting in queue... 
+The following packages have to be installed:
+ arp-scan_1.10.0-10.fc44.x86_64                  Scanning and fingerprinting tool
+ perl-Clone_0.48-1.fc44.x86_64                   Recursively copy perl data types
+ perl-Compress-Raw-Bzip2_2.218-1.fc44.x86_64     Low-level interface to bzip2 compression library
+ perl-Compress-Raw-Zlib_2.222-1.fc44.x86_64      Low-level interface to the zlib compression library
+ perl-Data-Dump_1.25-14.fc44.noarch              Pretty printing of data structures
+ perl-Digest-HMAC_1.05-4.fc44.noarch             Keyed-Hashing for Message Authentication
+ perl-Digest-SHA_1:6.04-522.fc44.x86_64          Perl extension for SHA-1/224/256/384/512
+ perl-Encode-Locale_1.05-33.fc44.noarch          Determine the locale encoding
+ perl-File-Listing_6.16-7.fc44.noarch            Parse directory listing
+ perl-File-Slurper_0.014-9.fc44.noarch           Simple, sane and efficient module to slurp a file
+ perl-HTML-Parser_3.85-1.fc44.x86_64             Perl module for parsing HTML
+ perl-HTML-Tagset_3.24-5.fc44.noarch             HTML::Tagset - data tables useful in parsing HTML
+ perl-HTTP-Cookies_6.11-7.fc44.noarch            HTTP cookie jars
+ perl-HTTP-Date_6.06-8.fc44.noarch               Date conversion routines
+ perl-HTTP-Message_7.02-1.fc44.noarch            HTTP style message
+ perl-HTTP-Negotiate_6.01-42.fc44.noarch         Choose a variant to serve
+ perl-I18N-Langinfo_0.24-524.fc44.x86_64         Query locale information
+ perl-IO-Compress_2.221-1.fc44.noarch            Read and write compressed data
+ perl-IO-Compress-Brotli_0.019000-5.fc44.x86_64  Perl bindings for Brotli compression
+ perl-IO-HTML_1.004-16.fc44.noarch               Open an HTML file with automatic character set detection
+ perl-LWP-MediaTypes_6.04-22.fc44.noarch         Guess media type for a file or a URL
+ perl-Module-Load_1:0.36-521.fc44.noarch         Run-time require of both modules and files
+ perl-NTLM_1.09-42.fc44.noarch                   NTLM Perl module
+ perl-Net-HTTP_6.24-2.fc44.noarch                Low-level HTTP connection (client)
+ perl-PerlIO-utf8_strict_0.010-12.fc44.x86_64    Fast and correct UTF-8 I/O
+ perl-Text-CSV_2.06-2.fc44.noarch                Comma-separated values manipulator
+ perl-TimeDate_1:2.33-18.fc44.noarch             A Perl module for time and date manipulation
+ perl-Try-Tiny_0.32-4.fc44.noarch                Minimal try/catch with proper localization of $@
+ perl-WWW-RobotRules_6.02-43.fc44.noarch         Database of robots.txt-derived permissions
+ perl-libwww-perl_6.83-1.fc44.noarch             A Perl interface to the World-Wide Web
+ perl-subs_1.04-524.fc44.noarch                  Perl pragma to predeclare subroutine names
+
+ * Waiting in queue... 
+ * Waiting for authentication... 
+ * Waiting in queue... 
+ * Downloading packages... 
+ * Running... 
+ * Installing packages... 
+
+Interface: wlp4s0, type: EN10MB, MAC: 86:59:c1:f7:13:10, IPv4: 192.168.1.36
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.1.1	4c:46:d1:b0:31:3f	(Unknown)
+192.168.1.34	dc:a6:32:8a:14:68	Raspberry Pi Trading Ltd
+192.168.1.33	4e:f2:09:26:14:b4	(Unknown: locally administered)
+
+11 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.10.0: 256 hosts scanned in 2.004 seconds (127.74 hosts/sec). 3 responded
+activity_log.txt
+adoVM CTM SIM a7.exe
+Evidences
+README.md
+  317  ip a
+  318  clear
+  319  ls
+  320  mkdir Evidences
+  321  mv activity_log\[network_test\].txt ./Evidences/
+  322  ls
+  323  ip a >> activity_log.txt
+  324  hostname -I >> activity_log.txt
+  325  ping google.com >> activity_log.txt
+  326  traceroute google.com >> activity_log.txt
+  327  ls
+  328  cat activity_log.txt 
+  329  nslookup google.com >> activity_log.txt
+  330  dig google.com >> activity_log.txt
+  331  hostname -I
+  332  nmap 192.168.1.36 google.com >> activity_log.txt
+  333  nmap -sV 192.168.1.36 google.com >> activity_log.txt
+  334  cat activity_log.txt 
+  335  nmap -A 192.168.1.36 google.com >> activity_log.txt
+  336  nmap 192.168.1.36 >> activity_log.txt
+  337  nmap -sV 192.168.1.36 >> activity_log.txt
+  338  nmap -A 192.168.1.36 >> activity_log.txt
+  339  tcpdump -i Ethernet >> activity_log.txt
+  340  tcpdump -i Ethernet
+  341  sudo tcpdump -i Ethernet
+  342  sudo tcpdump -i WLAN
+  343  ifconfig
+  344  sudo tcpdump -i Ethernet >> activity_log.txt
+  345  arp-scan --localhost >> activity_log.txt
+  346  arp-scan --localnet >> activity_log.txt
+  347  sudo arp-scan --localnet >> activity_log.txt
+  348  ls >> activity_log.txt
+  349  ls
+  350  cat activity_log.txt 
