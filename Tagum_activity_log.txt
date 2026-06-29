@@ -1,0 +1,21 @@
+Logs:
+Hostname: MeanT
+IP Address: 11.0.0.1
+
+User Activity Logs:
+ip a
+hostname -I
+ping facebook.com
+traceroute github.com
+nslookup google.com
+dig facebook.com
+nmap localhost
+nmap scanme.nmap.org
+nmap -sV 127.0.0.1
+nmap -A 127.0.0.0.1
+tcpdump -i Ethernet
+arp-scan --localnet
+sudo arp-scan --localnet
+ls
+cat activity_real.txt
+wget activity_10_log.txt
