@@ -1,0 +1,34 @@
+Logs:
+Hostname: osmand
+IP Address: 10.25.2.253
+
+User Activity Logs:
+help
+ip a
+ip route
+hostname -I
+ping 192.168.1.17
+traceroute 192.168.1.17
+netstat -tulnp
+nslookup 80
+nslookup 192.168.1.17
+nslookup youtube.com
+nslookup tesda.gov.ph
+dig dmdfajardo.pro
+nmap 10.25.2.253
+nmap -sV 10.25.2.253
+nmap -A 10.25.2.253
+arp-scan --localnet
+sudo arp-scan --localnet
+sudo arp-scan --localnet
+tcpdump -i eth0
+curl dmdfajardo.pro
+nc 10.25.2.253 80
+whoise 10.25.2.253
+whois 10.25.2.253
+whois 192.168.1.145
+ls
+cat activity_log.txt
+cat activity_real.txt
+cat activity_10_log.txt
+wget activity_10_log.txt
