@@ -1,0 +1,29 @@
+Logs:
+Hostname: intelshield
+IP Address: 10.0.0.10
+
+User Activity Logs:
+help
+ip a
+ip route
+hostname -I
+ping tesda.gov.ph
+traceroute tesda.gov.ph
+netsat -tulnp
+netstat -tulnp
+nslookup tesda.gov.ph
+dig tesda.gov.ph
+nmap tesda.gov.ph
+nmap -sV tesda.gov.ph
+nmap -A tesda.gov.ph
+arp-scan --localnet
+sudo arp-scan --localnet
+curl tesda.gov.ph
+
+nc 10.0.0.1 23
+whois 10.0.0.1
+Is
+ls
+cat activity_10_log.txt
+wget actiactivity_10_log.txt
+wget activity_10_log.txt
