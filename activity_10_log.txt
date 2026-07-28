@@ -1,0 +1,38 @@
+Logs:
+Hostname: ctm-3
+IP Address: 10.0.0.1
+
+User Activity Logs:
+help
+ip a
+hostname -I
+ping google.com
+tracerout google.com
+traceroute google.com
+nslookup google.com
+nslookup google.com
+nslookup google.com
+dig google.com
+ping https://www.sinrevilo.moc
+tracerout https://www.sinrevilo.moc
+traceroute https://www.sinrevilo.moc
+nslookup https://www.sinrevilo.moc
+dig https://www.sinrevilo.moc
+dig https://www.sinrevilo.moc
+nmap https://www.sinrevilo.moc
+nmap google.com
+nmap -sV https://www.sinrevilo.moc
+nmap -sV google.com
+nmap -A google.com
+nmap -A https://www.sinrevilo.moc
+tcpdump -i WLAN
+arp-scan --localnet
+sudo arp-scan --localnet
+ls
+cat report.txt
+wget report.txt
+cat activity_log.txt
+cat activity_real.txt
+cat activity_10_log.txt
+wget activity_real.txt
+wget activity_10_log.txt
