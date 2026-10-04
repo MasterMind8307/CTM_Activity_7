@@ -1,0 +1,143 @@
+CTM ACTIVITY 7 - adoVM CTM Terminal Simulator
+Student Hostname: ciphergasp
+Connection Type: WLAN
+IP Address: 10.1.0.1
+Subnet Mask: 255.0.0.0
+
+========================================
+TASK 1 - NETWORK INFO
+========================================
+
+Command: ip a
+Result:
+WLAN -> 10.1.0.1
+
+Command: hostname -I
+Result:
+10.1.0.1
+
+========================================
+TASK 2 - CONNECTIVITY TEST
+========================================
+
+Command: ping www.sinrevilo.moc
+Result:
+Reply from www.sinrevilo.moc: bytes=32 time=87ms TTL=64
+Reply from www.sinrevilo.moc: bytes=32 time=17ms TTL=64
+Reply from www.sinrevilo.moc: bytes=32 time=32ms TTL=64
+Reply from www.sinrevilo.moc: bytes=32 time=69ms TTL=64
+
+Command: traceroute www.sinrevilo.moc
+Result:
+1  192.168.1.40   LAN Gateway
+2  192.168.1.2    LAN Gateway
+3  10.0.3.84      ISP Core Router
+4  10.0.4.136     ISP Core Router
+5  10.0.5.133     ISP Core Router
+6  164.150.224.147 External Network
+
+Trace complete.
+
+========================================
+TASK 3 - DNS ANALYSIS
+========================================
+
+Command: nslookup www.sinrevilo.moc
+Result:
+Unknown host
+
+Command: dig www.sinrevilo.moc
+Result:
+status: NXDOMAIN
+
+========================================
+TASK 4 - PORT SCANNING
+========================================
+
+Command: nmap 192.168.1.30
+Result:
+Host seems down or not found.
+
+Command: nmap -sV 192.168.1.30
+Result:
+Host seems down or not found.
+
+Command: nmap -A 192.168.1.30
+Result:
+Host seems down or not found.
+
+Note:
+The required Nmap commands were executed, but the simulator did not recognize the selected target.
+
+========================================
+TASK 5 - TRAFFIC MONITORING
+========================================
+
+Command: tcpdump -i Ethernet
+Result:
+Traffic capture successful.
+
+Observed simulated traffic included:
+- ICMP echo requests
+- TCP traffic using port 80
+- TCP/UDP traffic using port 443
+- Traffic using port 3389
+- TCP SYN packets
+
+========================================
+TASK 6 - DEVICE DISCOVERY
+========================================
+
+Command: arp-scan --localnet
+Result:
+You don't have admin privileges to invoke this command.
+
+Command: sudo arp-scan --localnet
+Result:
+Local network scan successful.
+
+Detected simulated devices included:
+192.168.1.30   Epson-Printer
+192.168.1.170  Samsung-TV
+192.168.1.98   HP-Desktop
+192.168.1.212  Samsung-TV
+192.168.1.20   HP-Desktop
+192.168.1.36   SmartLight-01
+192.168.1.196  Galaxy-S21
+192.168.1.210  SmartLight-01
+192.168.1.175  TempSensor-X
+192.168.1.168  TPLink-Router
+
+========================================
+TASK 7 - LOGS AND FILES
+========================================
+
+Command: ls
+Result:
+activity_log.txt
+activity_real.txt
+activity_10_log.txt
+
+Command: cat activity_log.txt
+Result:
+"its a prank"
+
+Command: wget activity_real.txt
+Result:
+Downloaded successfully.
+
+========================================
+ACTIVITY STATUS
+========================================
+
+Activity 1 - Network Info: COMPLETED
+Activity 2 - Connectivity Test: COMPLETED
+Activity 3 - DNS Analysis: COMPLETED
+Activity 4 - Port Scanning: COMMANDS EXECUTED / TARGET NOT RECOGNIZED
+Activity 5 - Traffic Monitoring: COMPLETED
+Activity 6 - Device Discovery: COMPLETED
+Activity 7 - Logs & Files: COMPLETED
+
+Note:
+The adoVM simulator did not automatically populate the provided activity_log.txt file.
+This log was manually reconstructed from the commands executed and the actual simulator outputs observed during the activity.
